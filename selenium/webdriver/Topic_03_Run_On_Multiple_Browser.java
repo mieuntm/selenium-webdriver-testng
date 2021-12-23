@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -18,7 +20,7 @@ public class Topic_03_Run_On_Multiple_Browser {
 
 	@Test
 	public void TC_01_Firefox() {
-		System.setProperty("webdriver.firefox.driver", projectPath + "\\browserDrivers\\firefoxdriver.exe");
+		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("https://www.facebook.com/");
 		
